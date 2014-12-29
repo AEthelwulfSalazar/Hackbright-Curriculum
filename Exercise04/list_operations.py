@@ -19,71 +19,110 @@ test_list_operations.py for concrete examples of the expected function behavior.
 """
 
 def head(input_list):
-    """Return the first element of the input list."""
+    """
+        Return the first element of the input list.
+        [ A, B, C, D, E, F ] --> A
+    """
     pass
 
 def tail(input_list):
-    """Return all elements of the input list except the first."""
+    """
+        Return all elements of the input list except the first.
+        [ A, B, C, D ] --> [ B, C, D ]
+    """
     pass
 
 def last(input_list):
-    """Return the last element of the input list."""
+    """
+        Return the last element of the input list.
+        [ A, B, C, D ] --> D
+    """
     pass
 
 def init(input_list):
-    """Return all elements of the input list except the last."""
+    """
+        Return all elements of the input list except the last.
+        [ A, B, C, D ] --> [ A, B, C ]
+    """
     pass
 
 def first_three(input_list):
-    """Return the first three elements of the input list."""
+    """
+        Return the first three elements of the input list.
+        [ A, B, C, D, E, F ] --> [ A, B, C ]
+    """
     pass
 
 def last_five(input_list):
-    """Return the last five elements of the input list."""
+    """
+        Return the last five elements of the input list.
+        [ A, B, C, D, E, F ] --> [ B, C, D, E, F ]
+    """
     pass
 
 def middle(input_list):
-    """Return all elements of the input list except the first two and the last
-    two.
+    """
+        Return all elements of the input list except the first two and the last two.
+        [ A, B, C, D, E, F ] --> [ C, D ]
     """
     pass
 
 def inner_four(input_list):
-    """Return the third, fourth, fifth, and sixth elements of the input list."""
+    """
+        Return the third, fourth, fifth, and sixth elements of the input list.
+        [ A, B, C, D, E, F, G ] --> [ C, D, E, F ]
+    """
+
     pass
 
 def inner_four_end(input_list):
-    """Return the sixth, fifth, fourth, and third elements from the end of the
-    list, in that order.
+    """
+        Return the sixth, fifth, fourth, and third elements from the end of the 
+        list, in that order.
+        [ A, B, C, D, E, F, G ] --> [ F, E, D, C ]
     """
     pass
 
 def replace_head(input_list):
-    """Replace the head of the input list with the value 42."""
-    pass
-
-def replace_third_and_last(input_list):
-    """Replace the third and last elements of the input list with the value 37."""
-    pass
-
-def replace_middle(input_list):
-    """Replace all elements of the input list with the the values 42 and 37, in
-    that order, except for the first two and last two elements.
+    """
+        Replace the head of the input list with the value 42.
+        [ A, B, C, D ] --> [ 42, B, C, D]
     """
     pass
 
+def replace_third_and_last(input_list):
+    """
+        Replace the third and last elements of the input list with the value 37.
+        [ A, B, C, D, E, F ] --> [ A, B, 37, D, E, 37 ]
+    """
+    pass
+
+def replace_middle(input_list):
+    """
+        Replace all elements of the input list with the the values 42 and 37, in
+        that order, except for the first two and last two elements.
+        [ A, B, C, D, E, F, G, H, I ] --> [ A, B, 42, 37, H, I ] 
+    """
+
+    pass
+
 def delete_third_and_seventh(input_list):
-    """Remove the third and seventh elements of the input list."""
+    """
+        Remove the third and seventh elements of the input list.
+        [ A, B, C, D, E, F, G, H ] --> [ A, B, D, E, F, H ]
+    """
     pass
 
 def delete_middle(input_list):
-    """Remove all elements from the input list except for the first two and the
-    last two.
+    """
+        Remove all elements from the input list except for the first two and the
+        last two.
+         [ A, B, C, D, E, F, G, H ] --> [ A, B, G, H ]
     """
     pass
 
 """
-Now would be a great time to ask for a code review.
+Part 1 is finished! Ask for a code review before proceeding to Part 2.
 """
 
 """
@@ -103,50 +142,82 @@ the test_list_operations.py file for concrete examples of expected behavior.
 """
 
 def custom_len(input_list):
-    """custom_len(input_list) imitates len(input_list)"""
+    """
+        like len(input_list), should return the number of items in the list
+    """
     pass
 
 # For the next four functions, get clever using slice operations described in the first half
 def custom_append(input_list, value):
-    """custom_append(input_list, value) imitates input_list.append(value)"""
+    """
+        like input_list.append(value), should add the value to the end of the list
+        and return nothing
+    """
     pass
 
-def custom_extend(input_list, values):
-    """custom_extend(input_list, values) imitates input_list.extend(values)"""
+def custom_extend(input_list, second_list):
+    """
+        like input_list.extend(second_list), should append every item in the second 
+        list to the end of the first list and return nothing
+    """
     pass
 
 def custom_insert(input_list, index, value):
-    """custom_insert(input_list, index, value) imitates
-    input_list.insert(index, value)
+    """
+        like input_list.insert(index, value), should insert (not replace) the value
+        at the specified index of the input list and return nothing
     """
     pass
 
 def custom_remove(input_list, value):
-    """custom_remove(input_list, value) imitates input_list.remove(value)"""
+    """
+        like input_list.remove(value), should remove the first item of the 
+        value specified and return nothing
+    """
     pass
 
 def custom_pop(input_list):
-    """custom_pop(input_list) imitates input_list.pop()"""
+    """
+        like input_list.pop(), should remove the last item in the list and 
+        return it
+    """
     pass
 
 def custom_index(input_list, value):
-    """custom_index(input_list, value) imitates input_list.index(value)"""
+    """
+        like input_list.index(value), should return the index of the first item 
+        which matches the specified value
+    """
     pass
 
 def custom_count(input_list, value):
-    """custom_count(input_list, value) imitates input_list.count(value)"""
+    """
+        like input_list.count(value), should return the number of times the specified
+        value appears in the list.
+    """
     pass
 
 def custom_reverse(input_list):
-    """custom_reverse(input_list) imitates input_list.reverse()"""
+    """
+        like input_list.reverse(), should reverse the elements of the original list
+        and return nothing (we call this reversing "in place")
+    """
     pass
 
 def custom_contains(input_list, value):
-    """custom_contains(input_list, value) imitates (value in input_list)"""
+    """
+        like (value in input_list), should return True if the list contains the
+        specified value and False if it does not 
+    """
     pass
 
 def custom_equality(some_list, another_list):
-    """custom_equality(some_list, another_list) imitates
-    (some_list == another_list)
+    """
+        like (some_list == another_list), should return True if both lists contain
+        the same values in the same indexes
     """
     pass
+
+"""
+Part 2 is finished! Required: Ask for a code review. Optional: High-Five
+"""
