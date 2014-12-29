@@ -123,10 +123,9 @@ So if you take the rough pseudocode outline from above, you'll probably want to 
 As you get more comfortable with git, you won't need to do a 'git status' at every step.  We're only having you do that here so you can see what is happening at each step and get used to the messages that git returns.
 
 ## Go Back!
+At some point, commit your working code as is, and then go ahead and break something. Yes, make something stop working. And then save, but do NOT commit, these changes. Once you've wreaked some amount of havoc, continue reading. 
 
-At some point, if you didn't make a mistake in your code, go ahead and break something (though make sure you've commited your working code before you go breaking things).
-
-So if you're code is broken or you explored an idea that didn't turn out the way you wanted it to and you just want to go back to your last commit, try:
+Often, you will explore an idea that didn't turn out the way you wanted it to, or accidental changes get saved. In these cases, you'll just want to go back to your last commit, and throw out the changes you've made. Try:
 
     git reset --hard
 
