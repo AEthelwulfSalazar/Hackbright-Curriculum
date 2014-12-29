@@ -1,5 +1,3 @@
----- comments under review by Katie -----
-
 List Operations
 ===============
 
