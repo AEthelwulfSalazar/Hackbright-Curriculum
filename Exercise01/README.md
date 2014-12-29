@@ -133,11 +133,12 @@ So if you're code is broken or you explored an idea that didn't turn out the way
 *WARNING:* This will erase any changes you have not committed to git, so please use with care!
 
 
-Extra Credit
--------
 When you think you've finished, call an instructor over for a code review.
 
-After that, make your program a little more user friendly:
+Extra Credit
+-------
+
+Make your program a little more user friendly:
 
 1. If the user inputs something that is not a number, mock them for their crimes and ask them to enter a valid number.
 2. If the user inputs a number that isn't between 1-100 as requested, mock them for their crimes and ask them to enter a valid number.
