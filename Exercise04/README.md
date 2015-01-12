@@ -49,9 +49,9 @@ Each function in `test_list_operations.py` (which I will now refer to as a test)
 1. Gets some sample data (initialized in `setUp()` and passed in to each function with `self` -- more on this on a later date)    
 2. Sends the sample data through a `list_operations.py` function (there's one test function for each regular function)    
 3. Defines what the correct output for each function should be based on the input    
-4. Tests whether the result of the `list_operations.py` function matches the expected input ( it assertsEqual-ity )    
+4. Tests whether the result of the `list_operations.py` function matches the expected input ( it asserts equality )    
 
-If all of the asserted equalness turns out true, then your test passes. If any of them fails, your test fails.    
+If all of the asserted equality turns out true, then your test passes. If any of them fails, your test fails.    
 All of your tests failed because, obviously, there's nothing in any of your `list_operation` functions. So whatever your function returns (it returns nothing) doesn't match what the test expects (very specific things, including not nothing).
 
 For example: `test_1_A_head()` checks the function `head()` in `list_operations.py`. It asserts that the result of calling the function `head()` with the test data `months` should result in `'Jan'`.
