@@ -90,6 +90,7 @@ A rough pseudocode outline of the program will look like this:
         else:
             congratulate player
 
+**When you think you've finished, call an instructor over for a code review.**
 
 Version Control (git)
 -------
@@ -132,7 +133,7 @@ Often, you will explore an idea that didn't turn out the way you wanted it to, o
 *WARNING:* This will erase any changes you have not committed to git, so please use with care!
 
 
-When you think you've finished, call an instructor over for a code review.
+
 
 Extra Credit
 -------
