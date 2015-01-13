@@ -126,7 +126,7 @@ In this directory, you will find a text file, ```scores.txt```, containing a ser
 ```
 Restaurant Name:Rating
 ```
-Your job is to write a program named ```'sorted_data.py'``` reads the file, then spits out the ratings in alphabetical order by restaurant.
+Your job is to write a program named ```'sorted_data.py'``` that reads the file, then spits out the ratings in alphabetical order by restaurant.
 
 Sample output:
 ```
