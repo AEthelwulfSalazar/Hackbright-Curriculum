@@ -46,6 +46,11 @@ def init(input_list):
     """
     pass
 
+"""
+Do yourself a favor and get a short code review here.
+You can also get reviewed by a neighbor who has been reviewed.
+"""
+
 def first_three(input_list):
     """
         Return the first three elements of the input list.
