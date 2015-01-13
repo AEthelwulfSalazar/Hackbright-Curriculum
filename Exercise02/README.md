@@ -164,7 +164,7 @@ Now we have a remote - this is like a portal that goes to whatever URL we point 
 
     git push [remote name] master
 
-Replace [remote name] (no square brackets) with the name you used when you added the remote.  You might wonder about what "master" means - that's the name of the branch. For now, we'll have only one branch, so we'll always type master there. In the Further Reading section, there's some information about branching.
+Replace \[remote name\] (no square brackets) with the name you used when you added the remote.  You might wonder about what "master" means - that's the name of the branch. For now, we'll have only one branch, so we'll always type master there. In the Further Reading section, there's some information about branching.
 
 Once you've typed the "git push" command, git will ask you for a username - this is the username you signed up with github under. Then, it will ask for a password. When you type, you may be used to seeing asterisks(*) appear, but nothing will show up instead of just displaying your password for the world to see - so don't worry about typing it in in front of your partner.
 

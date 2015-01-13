@@ -97,6 +97,8 @@ Forsooth, or somesuch.
 ```
 You can use any text as an input corpus, you might try [Project Gutenberg](http://www.gutenberg.org/) for some inspiration.
 
+Once you've got your random text generator working to a somewhat sensible point, you're finished! Please pause, and procure a code review. Then, read below for more challenges.
+
 Extra Credit
 ------------
 Do any of the following

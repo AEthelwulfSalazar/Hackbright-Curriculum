@@ -120,13 +120,13 @@ The loop variable ```line``` will store each line of the file in turn.
 
 
 
-Description
+Codin' time
 -------
 In this directory, you will find a text file, ```scores.txt```, containing a series of local restaurant ratings. Each line looks like this:
 ```
 Restaurant Name:Rating
 ```
-Your job is to write a program named ```'sorted_data.py'``` reads the file, then spits out the ratings in alphabetical order by restaurant
+Your job is to write a program named ```'sorted_data.py'``` that reads the file, then spits out the ratings in alphabetical order by restaurant.
 
 Sample output:
 ```
@@ -144,3 +144,4 @@ Restaurant 'Pancho Villa' is rated at 3.
 Restaurant 'Taqueria Cancun' is rated at 2.
 Restaurant 'Urbun Burger' is rated at 1.
 ```
+When you're finished, please get a code review from one of your friendly neighborhood instructors/TAs.  

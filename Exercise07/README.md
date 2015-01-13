@@ -67,6 +67,8 @@ cats 1
 
 We have provided a file 'twain.txt' for you to test your code on.
 
+Once you've finished, give your pairing partner a high-five, and then please get a code review. If you have time, read on to enter the bonus round. :boom:
+
 Extra Credit
 -----------
 The output of your program is not as nice as it could be. Try to improve it:
