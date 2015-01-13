@@ -3,7 +3,7 @@ Exercise 01: Conditionals, variables
 
 Tutorials & Resources:
 -------
-Complete these practice exercises before you attempt this main portion of today's exercise. If you get stuck, check the work you've already completed. 
+Complete these practice exercises before you attempt the main portion of today's exercise. If you get stuck, check the work you've already completed. 
 
 * http://learnpythonthehardway.org/book/ex6.html
 * http://learnpythonthehardway.org/book/ex7.html
