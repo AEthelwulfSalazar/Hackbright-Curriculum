@@ -135,3 +135,4 @@ Meringue:math chriszf$
 ```
 We have provided a sample arithmetic.py with dummy stubs that do the wrong thing. When you've completed your REPL, copy your completed arithmetic.py from the previous exercise to the current directory and replace our stubs.
 
+Don't forget to ask for a code review when you think you are finished.
