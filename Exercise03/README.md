@@ -80,6 +80,8 @@ The psuedocode for our REPL will look like this:
 
 Description
 -------
+Now that we've finished our aritmetic functions in Exercise 2, we're going to implement the calculator. You will eventually need to copy your arithmetic.py file from Exercise 2 as you implement your own calculator, but you can use the one provided for now if you like. Do Exercise 3 in a separate directory so you get practice with creating and pushing repos. You can download your starting point for calculator.py by clicking on the filename, opening the Raw version and doing a File->Save Page As in Chrome.
+
 Implement a REPL for a calculator in a file named 'calculator.py'. Your calculator will use the interface from the previous exercise:
 
     In the file arithmetic.py, these function signatures are required
