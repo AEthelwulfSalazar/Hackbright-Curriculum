@@ -121,6 +121,8 @@ We have provided a sample arithmetic.py with a function that matches the signatu
 
 Try running the program first to understand where and how it fails. Read the error messages, and try to fix it by addressing one error at a time.
 
+**Once you have finished all the functions, call an instructor over for a code review.**
+
 
 Version Control
 -------
