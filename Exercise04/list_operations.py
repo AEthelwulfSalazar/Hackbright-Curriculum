@@ -13,7 +13,7 @@ language syntax and/or cannot be implemented in terms of other list operations:
     * List index deletion (del some_list[index])
     * List slicing deletion (del some_list[start:end])
 
-In this section you will implement functions that each use just one of the
+In this section you will implement functions that each use just one of the above
 operations. The docstring of each function describes what it should do. Consult
 test_list_operations.py for concrete examples of the expected function behavior.
 
