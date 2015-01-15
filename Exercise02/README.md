@@ -104,8 +104,8 @@ A sample session of the calculator looks like this:
     5
     > * 2 3
     6
-    > / 6 2
-    3.000000
+    > / 7 2
+    3.500000
     > square 2
     4
     > cube 3
