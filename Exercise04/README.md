@@ -92,6 +92,8 @@ operations. The docstring of each function describes what it should do. Consult
 
 **DO NOT USE ANY OF THE BUILT IN LIST METHODS**
 
+**DO NOT USE `len(l)`**
+
 **GET A CODE REVIEW BEFORE MOVING ON TO PART 2**
 
 #### Part 2: Derived operations on lists
