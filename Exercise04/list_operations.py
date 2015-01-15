@@ -16,6 +16,8 @@ language syntax and/or cannot be implemented in terms of other list operations:
 In this section you will implement functions that each use just one of the
 operations. The docstring of each function describes what it should do. Consult
 test_list_operations.py for concrete examples of the expected function behavior.
+
+DO NOT USE ANY OF THE BUILT IN LIST METHODS
 """
 
 def head(input_list):
