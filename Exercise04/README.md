@@ -16,7 +16,7 @@ First, work through the following resources on lists:
 
 ### A few things about tests
 
-#### Some background reading:
+#### Some background reading (just read, don't do):
 
 http://learnpythonthehardway.org/book/ex47.html
 
@@ -74,5 +74,38 @@ Ran 25 tests in 0.002s
 
 OK
 ```
+#### Part 1: Fundamental operations on lists
 
-[<img src="http://bit.ly/1pzkhYG">](http://bit.ly/1k2hxUv)
+The fundamental operations on lists in Python are those that are part of the
+language syntax and/or cannot be implemented in terms of other list operations:
+* List literals (`[]`, `['hello']`, `[3, 1, 4, 1, 5, 9]`, etc.)
+* List indexing (`some_list[index]`)
+* List indexing assignment (`some_list[index] = value`)
+* List slicing (`some_list[start:end]`)
+* List slicing assignment (`some_list[start:end] = another_list`)
+* List index deletion (`del some_list[index]`)
+* List slicing deletion (`del some_list[start:end]`)
+
+In this section you will implement functions that each use just one of the above
+operations. The docstring of each function describes what it should do. Consult
+`test_list_operations.py` for concrete examples of the expected function behavior.
+
+**DO NOT USE ANY OF THE BUILT IN LIST METHODS**
+
+**GET A CODE REVIEW BEFORE MOVING ON TO PART 2**
+
+#### Part 2: Derived operations on lists
+
+In this section you will implement your own versions of the standard list methods.
+You should use only the primitive operations from Part 1 and 2 in your implementations.
+For loops are also allowed, such as the following:
+```    
+for element in some_list:
+    # Do something with element
+```
+Each custom method imitates a built-in list method, as described by the docstring
+for each function. Play with the built-in methods in the Python REPL to get a feel
+for how they work before trying to write your custom version. You may also look at
+the test_list_operations.py file for concrete examples of expected behavior.
+
+**Don't forget to get a code review when you think you're finished**
