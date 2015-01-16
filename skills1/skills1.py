@@ -11,7 +11,7 @@ def all_odd(number_list):
 def all_even(number_list):
     return []
 
-# Write a function that takes a list of strings and a new list with all strings of length 4 or greater.
+# Write a function that takes a list of strings and returns a new list with all strings of length 4 or greater.
 def long_words(word_list):
     return []
 
