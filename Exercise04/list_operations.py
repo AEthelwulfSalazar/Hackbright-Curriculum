@@ -86,7 +86,7 @@ def inner_four_end(input_list):
     """
         Return the sixth, fifth, fourth, and third elements from the end of the 
         list, in that order.
-        [ A, B, C, D, E, F, G ] --> [ F, E, D, C ]
+        [ A, B, C, D, E, F, G, H, I, J, K, L] --> [ G, H, I, J ]
     """
     pass
 
