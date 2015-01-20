@@ -81,14 +81,14 @@ Look at our requirements:
     $ python -i melons.py
 
   The "-i" command for Python means "run in the interpreter"--it runs your
-  Python module (file) and leaves you in the Python interpreter, so you
+  Python module (file) and leaves you in the Python interpreter, so you can
   test out your code. At this point, you should be able to try things like::
 
       >>> w = Watermelon()
-      >>> w.get_price(4)
-      20
-      >>> w.get_price(5)
-      18.75
+      >>> w.get_price(2)
+      10
+      >>> w.get_price(3)
+      11.25
 
   (the latter price because of our special rule about discounts for quantity
   purchases of Watermelons)
@@ -113,7 +113,7 @@ Right now, you probably have code that looks like this::
 
         def get_price(self, qty):
             total = 5.0 * qty
-            if qty >= 5:
+            if qty >= 3:
                 total = total * 0.75
             return total
 
@@ -135,9 +135,11 @@ You could make the base price come from a constant, like::
 
         def get_price(self, qty):
             total = BASE_MELON_PRICE * qty
-            if qty >= 5:
+            if qty >= 3:
                 total = total * 0.75
             return total
+
+..FIXME
 
 That would make it easier to update--but it wouldn't be flexible enough for
 our CEO. Sometimes they talk about making the base price vary on dynamic
@@ -173,7 +175,7 @@ and child classes like::
 
         def get_price(self, qty):
             total = self.get_base_price() * qty
-            if qty >= 5:
+            if qty >= 3:
                 total = total * 0.75
             return total
 
@@ -263,7 +265,7 @@ Right now, you probably have code like::
 
         def get_price(self, qty):
             total = self.get_base_price() * qty
-            if qty >= 5:
+            if qty >= 3:
                 total = total * 0.75
             return total
 
@@ -294,7 +296,7 @@ For example, we could do this::
         def get_price(self, qty):
             total = self.get_base_price() * qty
 
-            if qty >= 5:
+            if qty >= 3:
                 total = total * 0.75
 
             if self.imported:
@@ -344,6 +346,6 @@ this melon is available today.
 Advanced: Update this function to *optionally* take a date argument so
 that, if one is given, we check for melon availability on that date. If
 no argument is given, it should use today's date. This requires a little
-clever thinking around around optional arguments.
+clever thinking around optional arguments.
 
 When you've done this, please **stop and ask for a code review**.
