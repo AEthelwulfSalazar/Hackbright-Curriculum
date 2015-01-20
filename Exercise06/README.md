@@ -87,10 +87,10 @@ and value elements of each dictionary entry in turn.
 
 
 ###Dictionary Exercises (do these first):
-* http://learnpythonthehardway.org/book/ex39.html (Stop at "Making Your Own Dictionary Modules")
+* http://learnpythonthehardway.org/book/ex39.html **(Stop at "Making Your Own Dictionary Modules")**
 * http://docs.python.org/tutorial/datastructures.html#dictionaries
 * http://www.learnpython.org/en/Dictionaries
-* http://docs.python.org/library/stdtypes.html#mapping-types-dict
+* http://docs.python.org/library/stdtypes.html#mapping-types-dict (Read. Familiarize, not memorize.)
 
 
 
