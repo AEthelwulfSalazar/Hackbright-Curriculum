@@ -22,7 +22,8 @@ Our salespeople use the following rules to determine the price of melons:
 
 - Normally, melons cost $5
 
-- Casabas and Ogens cost $6, though, as they're harder to grow.
+- The base cost of Casabas and Ogens is $1/each more, though, as they're
+  harder to grow.
 
 - Imported melons cost 1.5 times as much as they otherwise would, because of
   shipping cost.
@@ -111,7 +112,10 @@ Right now, you probably have code that looks like this::
         seasons = ['Fall', 'Summer']
 
         def get_price(self, qty):
-            return 5.0 * qty
+            total = 5.0 * qty
+            if qty >= 5:
+                total = total * 0.75
+            return total
 
 (and similar classes for all of the other melons)
 
@@ -130,7 +134,10 @@ You could make the base price come from a constant, like::
         seasons = ['Fall', 'Summer']
 
         def get_price(self, qty):
-            return BASE_MELON_PRICE * qty
+            total = BASE_MELON_PRICE * qty
+            if qty >= 5:
+                total = total * 0.75
+            return total
 
 That would make it easier to update--but it wouldn't be flexible enough for
 our CEO. Sometimes they talk about making the base price vary on dynamic
@@ -165,7 +172,10 @@ and child classes like::
         seasons = ['Fall', 'Summer']
 
         def get_price(self, qty):
-            return self.get_base_price() * qty
+            total = self.get_base_price() * qty
+            if qty >= 5:
+                total = total * 0.75
+            return total
 
 That's great.
 
@@ -209,14 +219,131 @@ to use?
 
 When you've done this, please **stop and ask for a code review**.
 
+BTW, notice how the Python exceptions are a hierarchy of classes--
+this let's you catch a general class of error or a very specific error,
+depending on which is what you want. So you can say things like::
 
+    try:
+        7 / 0
+    except ZeroDivisonError:
+        print "You can't divide by zero!"
 
+or::
 
+    try:
+        7 / 0
+    except ArithmeticError:
+        print "You made some sort of mathy error"
+
+Depending on whether you want to handle zero-division distinctly or just like
+other math errors. You could even write something like::
+
+    try:
+        7 / 0
+    except ZeroDivisonError:
+        print "You can't divide by zero!"
+    except ArithmeticError:
+        print "You made some sort of mathy error"
+
+Which would handle all cases, but handle zero-division separately.
+
+Pretty neat, huh?
+
+Part IV: Flexing Our Hierarchies
+================================
+
+Right now, you probably have code like::
+
+    class Watermelon(AbstractMelon):
+        species = "Watermelon"
+        color = "green"
+        imported = False
+        shape = 'natural'
+        seasons = ['Fall', 'Summer']
+
+        def get_price(self, qty):
+            total = self.get_base_price() * qty
+            if qty >= 5:
+                total = total * 0.75
+            return total
+
+That's fine, but we have a few things we can improve.
+
+Watermelons are our standard base price (except for quantity discounts)
+since they're natural-shaped and domestically-grown. If our supplier for
+Watermelons switched to being foreign-grown, we'd have to do two things:
+
+- change that attribute to ``imported = True``
+
+- update our ``get_price(qty)`` method to multiply the final price by 1.5,
+  since that's our markup for imported watermelons
+
+It's easy to imagine that we'd do the first and forget to do the second.
+Plus, even if we did, we'd be sprinkling the "logic" for this all over
+the place.
+
+For example, we could do this::
+
+    class Watermelon(AbstractMelon):
+        species = "Watermelon"
+        color = "green"
+        imported = False
+        shape = 'natural'
+        seasons = ['Fall', 'Summer']
+
+        def get_price(self, qty):
+            total = self.get_base_price() * qty
+
+            if qty >= 5:
+                total = total * 0.75
+
+            if self.imported:
+                total = total * 1.5
+
+            return total
+
+And then we can't forget to update the price if the origin changes--but
+we'd have a lot of duplicate code throughout.
+
+Better would be for our base class, ``AbstractMelon``, to handle much of
+our price calculating, but for it to rely on the attributes set on the
+individual melon type.
+
+In this ``get_price()`` for `AbstractMelon`, We'd need to get the "add-on" $1
+for Casvas and Ogdens somehow, then the total based on shape/origin/quantity.
+For Watermelons and Cantaloupe, we'll need to then apply our discounts.
+
+Create a method on the base class to handle this work. Where needed,
+use that method from the individual melon classes.
+
+When you've done this, please **stop and ask for a code review**.
+
+Part IV: Is the Melon Available?
+================================
+
+*(This section is advanced and optional)*
 
 For availability, we keep track of the season a melon is available for
 purchase. We define these as:
 
-- Winter: Dec 21-Mar 20
-- Spring: Mar 21-Jun 20
-- Summer: Jun 21-Sep 20
-- Fall: Sep 21-Dec 20
+- Winter: Jan, Feb, Mar
+- Spring: Apr, May, Jun
+- Summer: Jul, Aug, Sep
+- Fall: Oct, Nov, Dec
+
+Add a function onto our AbstractMelon class that tells us whether a
+particular melon is available for sale today.
+
+To do this, you'll want to learn about the Python `datetime` library. This
+has features to give you today's date, as well as ways to figure out the
+month part of that.
+
+Create a function that returns `True` or `False` to let us know whether
+this melon is available today.
+
+Advanced: Update this function to *optionally* take a date argument so
+that, if one is given, we check for melon availability on that date. If
+no argument is given, it should use today's date. This requires a little
+clever thinking around around optional arguments.
+
+When you've done this, please **stop and ask for a code review**.
