@@ -1,3 +1,4 @@
+
 # class Square(object):
 #     def get_price(self):
 #         return super(Square, self).get_price() * 2
@@ -15,6 +16,17 @@ class Melon(object):
         if self.shape == "square":
             price *= 2
         return price * qty
+
+
+# class Watermelon(object):
+#     species = "Watermelon"
+#     color = "green"
+#     imported = False
+#     shape = 'natural'
+#     seasons = ['Fall', 'Summer']
+
+#     def get_price(self, qty):
+#         return 5.0 * qty
 
 
 class Watermelon(Melon):
@@ -89,5 +101,6 @@ class Ogen(Melon):
 # class Squash(object):
 #     def get_price(self):
 #         return 2.50
+
 
 
