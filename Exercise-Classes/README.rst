@@ -139,11 +139,13 @@ You could make the base price come from a constant, like::
                 total = total * 0.75
             return total
 
-..FIXME
 
 That would make it easier to update--but it wouldn't be flexible enough for
-our CEO. Sometimes they talk about making the base price vary on dynamic
+our CEO. Sometimes the CEO talks about making the base price vary on dynamic
 things, like the weather that day or the day of the week, or other things.
+If we had to put that dynamic logic into each melon type class, we'd be
+duplicating a lot of code--so even though it's $5 for now, we want to
+plan ahead.
 
 We could solve this by making all of our melons subclass a common base class
 (`Melon` might be a good name for this!), and they could get the base price
@@ -281,7 +283,7 @@ Watermelons switched to being foreign-grown, we'd have to do two things:
   since that's our markup for imported watermelons
 
 It's easy to imagine that we'd do the first and forget to do the second.
-Plus, even if we did, we'd be sprinkling the "logic" for this all over
+Plus, even if we did, we'd be sprinkling the logic for this all over
 the place.
 
 For example, we could do this::
@@ -312,11 +314,15 @@ our price calculating, but for it to rely on the attributes set on the
 individual melon type.
 
 In this ``get_price()`` for `AbstractMelon`, We'd need to get the "add-on" $1
-for Casvas and Ogens somehow, then the total based on shape/origin/quantity.
+for Casaba and Ogen somehow, then the total based on shape/origin/quantity.
 For Watermelons and Cantaloupe, we'll need to then apply our discounts.
 
 Create a method on the base class to handle this work. Where needed,
 use that method from the individual melon classes.
+
+To do this, it's probably going to be helpful to put an attribute on the
+the Casaba and Ogen class to keep track of their $1 base price bump;
+your logic in the base class ``get_price()`` could use that.
 
 When you've done this, please **stop and ask for a code review**.
 

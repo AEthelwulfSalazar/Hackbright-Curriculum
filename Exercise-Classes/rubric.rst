@@ -158,14 +158,11 @@ or like this::
 The second is nice to learn, as it lets them provide some documentation for
 their error.
 
-
 Part IV
 =======
 
 The goal here is to move some of the common logic to the parent class, while
 getting data from the subclass.
-
-.. FIXME: provide some hints on the add-on stuff in the doc!
 
 A good outcome would be::
 
