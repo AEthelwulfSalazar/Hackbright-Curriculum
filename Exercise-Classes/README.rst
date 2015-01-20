@@ -310,7 +310,7 @@ our price calculating, but for it to rely on the attributes set on the
 individual melon type.
 
 In this ``get_price()`` for `AbstractMelon`, We'd need to get the "add-on" $1
-for Casvas and Ogdens somehow, then the total based on shape/origin/quantity.
+for Casvas and Ogens somehow, then the total based on shape/origin/quantity.
 For Watermelons and Cantaloupe, we'll need to then apply our discounts.
 
 Create a method on the base class to handle this work. Where needed,
