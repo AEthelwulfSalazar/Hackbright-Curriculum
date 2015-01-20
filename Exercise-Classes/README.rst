@@ -207,21 +207,24 @@ Think about a way you could prevent them from doing so.
 
 You could do this either by:
 
-- disallowing them from making an instance of this class at all
+- allowing them to make an instance of this class, but giving a better
+  error message when they try to call ``get_price(qty)`` on it (so you could
+  raise a message when ``get_price(qty)`` is called on the base class
+  directly).
 
 or
 
-- allowing them to make an instance of this class, but giving a better
-  error message when they try to call ``get_price(qty)`` on it
+- disallowing them from making an instance of this class at all. Is there
+  a method that is always called when an object is created? Can you raise
+  an error on the base class if you tried to make an instance directly from
+  it?
 
-Which do you like better?
+Which of these options do you like better?
 
-In either case, learn how to "raise" an error ("exception") in Python. You
-may find https://docs.python.org/2/library/exceptions.html helpful here.
+Whichever you choose, learn how to "raise" an error ("exception") in Python.
+You may find https://docs.python.org/2/library/exceptions.html helpful here.
 Which of these errors sounds like it would be the most helpful/descriptive
 to use?
-
-..FIXME I picked my error, but where do I put it? Would like some guidance
 
 When you've done this, please **stop and ask for a code review**.
 
