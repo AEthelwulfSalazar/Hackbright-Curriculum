@@ -219,6 +219,8 @@ may find https://docs.python.org/2/library/exceptions.html helpful here.
 Which of these errors sounds like it would be the most helpful/descriptive
 to use?
 
+..FIXME I picked my error, but where do I put it? Would like some guidance
+
 When you've done this, please **stop and ask for a code review**.
 
 BTW, notice how the Python exceptions are a hierarchy of classes--
