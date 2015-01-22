@@ -34,8 +34,8 @@ Our salespeople use the following rules to determine the price of melons:
 Right now, we've just had our salespeople look at the data file and figure out
 how much a melon will cost by applying all of these rules to the melon.
 
-So, for example, an foreign-grown natural-shaped Christmas melon would
-cost $5 * 1.5 (for being foreign grown) = $7.50.
+So, for example, a foreign-grown natural-shaped Christmas melon would
+cost $5 * 1.5 (for being foreign-grown) = $7.50.
 
 We have some new challenges, though: some of our melons are
 discounted for multiple purchases. Starting now, we're offering the following
@@ -65,13 +65,13 @@ Look at our requirements:
 - Add a method with the following signature::
 
     def get_price(qty):
-        """Determine price for this quantity melons of this type.
+        """Determine price for this quantity of melons of this type.
 
         Return a float of the total price.
         """
 
   This way, we can ask each melon class how much `x` number melons of that
-  type should be.
+  type should cost.
 
 - You can test your code by going into the python console and interactively
   playing with your classes.
@@ -197,7 +197,7 @@ How can we suggest to other programmers that they shouldn't ever directly
 create instances of the base `Melon` class?
 
 There's a good naming convention for this. Go ahead and rename this class
-and fix the code to use this (hint: read about how to do this kind of
+and fix the code to use this naming convention (hint: read about how to do this kind of
 replace-everywhere for Sublime! Good programmers are lazy).
 
 However, even with this name change, some of our programmers STILL are
@@ -336,7 +336,7 @@ Part IV: Is the Melon Available?
 
 *(This section is advanced and optional)*
 
-For availability, we keep track of the season a melon is available for
+For availability, we keep track of the season that a melon is available for
 purchase. We define these as:
 
 - Winter: Jan, Feb, Mar
