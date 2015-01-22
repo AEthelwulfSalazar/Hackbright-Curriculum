@@ -61,7 +61,9 @@ classes--since we're combining data *and* functionality.
 
 Look at our requirements:
 
-- Define a class for each melon type that we sell.
+- Define a class for each melon type that we sell. You should do this in
+  the ``melons.py`` file (which is empty at the beginning except for
+  a docstring).
 
 - Add attributes for things like their name/color/shape/origin/seasons
 
