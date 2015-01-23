@@ -132,15 +132,11 @@ def sum_zero(list1):
         >>> sort_pairs( sum_zero([1, 2, 3, -2, -1, 1, 1]) )
         [[-2, 2], [-1, 1]]
 
-    Of course, if there are two zeros to pair together, that's fine:
+    Of course, if there are one or more zeros to pair together, 
+    that's fine, too:
 
         >>> sort_pairs( sum_zero([1, 2, 3, -2, -1, 1, 0, 1, 0]) )
         [[-2, 2], [-1, 1], [0, 0]]
-
-    But one zero shouldn't be able to pair with itself:
-   
-       >>> sort_pairs( sum_zero([1, 2, 3, -2, -1, 1, 0, 1]) )
-       [[-2, 2], [-1, 1]]
 
     """
 
