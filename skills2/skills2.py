@@ -40,7 +40,7 @@ def count_unique(string1):
     For example:
 
         >>> print_dict(count_unique("each word appears once"))
-        {'appears': 1, 'each': 1, 'once': 1, 'word': 0}
+        {'appears': 1, 'each': 1, 'once': 1, 'word': 1}
   
     Words that appear more than once should be counted each time:
 
