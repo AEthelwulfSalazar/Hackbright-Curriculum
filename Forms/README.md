@@ -4,6 +4,8 @@ Make a simple order form using tables and forms and submit it to a server.
 
 Your goal is to make something that looks like the screenshot below. An example can also be viewed here: https://ubermelon-order-form.herokuapp.com/
 
+You can open a file in Chrome by using File->Open and navigating to your form.html.
+
 ## Specifications
 
 ### Header
@@ -48,4 +50,8 @@ The disclaimer about the quantities is in a footer tag.
 
 ## Screenshot
 
-[form screen](form.png)
+![form screen](form.png?raw=true)
+
+### Extra credit
+
+Make other form fields and submit them. See what happens.
