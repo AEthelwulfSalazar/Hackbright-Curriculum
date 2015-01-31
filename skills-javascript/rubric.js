@@ -246,7 +246,7 @@ function isPrime(x) {
         if (x / i == Math.floor( x / i)) {
             return false;
         }
-        // We never found a divisor, so it's not prime
+        // We never found a divisor, so it's prime
     }
     return true;
 }
